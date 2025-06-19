@@ -1923,9 +1923,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2302149224647271680, guid: 374125a96c614b843a401c639deef27a, type: 3}
+    - target: {fileID: 1789567571270113042, guid: 374125a96c614b843a401c639deef27a, type: 3}
       propertyPath: isTailRotor
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2302149224647271680, guid: 374125a96c614b843a401c639deef27a, type: 3}
+      propertyPath: isTailRotor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4052307342785371409, guid: 374125a96c614b843a401c639deef27a, type: 3}
       propertyPath: m_Enabled

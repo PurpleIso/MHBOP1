@@ -11,7 +11,6 @@ public class FaceCamera : MonoBehaviour
 
     void LateUpdate()
     {
-        // Make the sprite always face the camera
         transform.forward = cam.forward;
     }
 }

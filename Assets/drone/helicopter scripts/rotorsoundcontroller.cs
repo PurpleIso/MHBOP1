@@ -8,7 +8,7 @@ public class RotorSound : MonoBehaviour
     public AudioClip idleClip;
     public MonoBehaviour helicopterControlScript;
 
-    public ParticleSystem[] exhaustParticles; // Supports multiple exhausts
+    public ParticleSystem[] exhaustParticles; 
 
     private bool isOn = false;
 
@@ -41,7 +41,7 @@ public class RotorSound : MonoBehaviour
         if (helicopterControlScript != null)
             helicopterControlScript.enabled = false;
 
-        // 🔥 Start exhaust effects
+
         foreach (var ps in exhaustParticles)
         {
             if (ps != null)
@@ -70,7 +70,7 @@ public class RotorSound : MonoBehaviour
         if (helicopterControlScript != null)
             helicopterControlScript.enabled = false;
 
-        // 🔥 Stop exhaust effects
+
         foreach (var ps in exhaustParticles)
         {
             if (ps != null)

@@ -7,7 +7,7 @@ public class HelicopterController : MonoBehaviour
     public float pitchSpeed = 50f;
     public float rollSpeed = 50f;
     public float liftForce = 10f;
-    public float hoverForce = 9.81f;
+    public float hoverForce = 10f;
 
     public float linearDrag = 0.5f;
     public float angularDrag = 2f;
@@ -61,8 +61,8 @@ public class HelicopterController : MonoBehaviour
 
         float horizontalSpeed = horizontalVelocity.magnitude;
 
-        float speedThreshold = 2.78f; // 10 km/h
-        float blendRange = 5f;        // Smooth transition over 5 m/s
+        float speedThreshold = 3f;
+        float blendRange = 5f;
         float blendFactor = Mathf.Clamp01((horizontalSpeed - speedThreshold) / blendRange);
 
         if (blendFactor <= 0f) return;

@@ -4,15 +4,12 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public Button resumeButton;
-
     private bool isPaused = false;
-
     void Start()
     {
         resumeButton.onClick.AddListener(Resume);
         pauseMenuUI.SetActive(false);
     }
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -23,14 +20,12 @@ public class PauseMenu : MonoBehaviour
                 Pause();
         }
     }
-
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
-
     void Pause()
     {
         pauseMenuUI.SetActive(true);

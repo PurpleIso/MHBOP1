@@ -17,13 +17,11 @@ public class HelicopterSpawner : MonoBehaviour
 
     void Update()
     {
-        // Press H to switch to the next helicopter
         if (Input.GetKeyDown(KeyCode.H))
         {
             SwitchHelicopter();
         }
     }
-
     void SpawnHelicopter()
     {
         if (helicopterPrefabs.Length == 0 || spawnPoint == null)
@@ -33,9 +31,9 @@ public class HelicopterSpawner : MonoBehaviour
         }
 
         currentHelicopter = Instantiate(helicopterPrefabs[currentIndex], spawnPoint.position, spawnPoint.rotation);
-        CurrentPlayerHelicopter = currentHelicopter;  // <-- Set the static property here
+        CurrentPlayerHelicopter = currentHelicopter;
 
-        // Link camera target
+
         ThirdPersonCamera cameraController = Camera.main.GetComponent<ThirdPersonCamera>();
         if (cameraController != null)
         {
@@ -45,23 +43,7 @@ public class HelicopterSpawner : MonoBehaviour
         {
             Debug.LogWarning("ThirdPersonCamera script not found on the main camera.");
         }
-
-        // Link UI to helicopter
-        HelicopterUI ui = FindObjectOfType<HelicopterUI>();
-        if (ui != null)
-        {
-            Rigidbody rb = currentHelicopter.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-                ui.SetHelicopter(rb);
-            }
-            else
-            {
-                Debug.LogWarning("No Rigidbody found on helicopter.");
-            }
-        }
     }
-
     void SwitchHelicopter()
     {
         if (currentHelicopter != null)

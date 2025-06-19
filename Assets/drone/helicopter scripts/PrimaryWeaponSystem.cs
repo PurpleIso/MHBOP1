@@ -17,9 +17,8 @@ public class WeaponData
     public KeyCode fireKey = KeyCode.Space;
 
     [Header("Audio")]
-    public AudioSource fireAudioSource;     // Dedicated audio source for this weapon
-    public AudioClip[] fireClips;           // Firing sound options
-
+    public AudioSource fireAudioSource;     
+    public AudioClip[] fireClips;           
     [HideInInspector]
     public float fireCooldown = 0f;
 
